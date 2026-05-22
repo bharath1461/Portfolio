@@ -1,63 +1,48 @@
-# 🌐 Personal Portfolio Website
+# Bharath Portfolio
 
-This repository contains the source code for my personal portfolio website.
-The portfolio showcases my projects, skills, and work in **web development, UI/UX design, and programming**.
+Personal portfolio website for showcasing my projects, skills, and contact links.
 
-## 🚀 About the Project
+## Live Site
 
-The goal of this portfolio is to create a clean and responsive website that highlights my work, technical skills, and projects. It serves as a central place where recruiters and collaborators can learn more about me and explore the projects I have built.
+https://bharath1461.github.io/Portfolio/
 
-## 🛠️ Built With
+## Highlights
 
-* HTML5
-* CSS3
-* JavaScript
+- Responsive single-page portfolio
+- Project showcase with live demo and GitHub links
+- Updated sections for About, Skills, Work, and Contact
+- GitHub Pages friendly with no build step required
 
-## ✨ Features
+## Featured Projects
 
-* Responsive design for desktop and mobile
-* Clean and minimal UI
-* Projects showcase section
-* Skills and tools section
-* Contact section with social links
+- HealthTrack
+- ShiftIn
+- Findly
+- HealthTrack2
+- Mysuru Unexplored
+- Soda
+- Palace Heritage
 
-## 📂 Project Structure
+## Built With
 
-```
-portfolio/
-│
+- HTML5
+- CSS3
+- GitHub Pages
+
+## Project Structure
+
+```text
+.
 ├── index.html
-├── style.css
-├── script.js
-├── assets/
-│   ├── images
-│   └── icons
 └── README.md
 ```
 
-## 💻 Getting Started
+## Local Preview
 
-To run this project locally:
+Open `index.html` in a browser, or use any static file server.
 
-1. Clone the repository
+## Contact
 
-```
-git clone https://github.com/YOUR-USERNAME/portfolio.git
-```
-
-2. Open the project folder
-
-3. Run `index.html` in your browser
-
-## 📸 Preview
-
-Portfolio preview will be available once the site is deployed.
-
-## 🔗 Connect With Me
-
-* LinkedIn: https://linkedin.com/in/bharath00146/
-* GitHub: https://github.com/bharath1461
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
+- GitHub: https://github.com/bharath1461
+- LinkedIn: https://linkedin.com/in/bharath00146
+- Email: bharath00127@gmail.com
