@@ -18,7 +18,6 @@ https://bharath1461.github.io/Portfolio/
 - HealthTrack
 - ShiftIn
 - Findly
-- HealthTrack2
 - Mysuru Unexplored
 - Soda
 - Palace Heritage

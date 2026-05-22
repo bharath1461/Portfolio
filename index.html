@@ -276,7 +276,7 @@
     .section-head {
       display: grid;
       gap: 28px;
-      grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+      grid-template-columns: minmax(240px, 0.82fr) minmax(0, 1.18fr);
       margin-bottom: 42px;
     }
 
@@ -346,13 +346,14 @@
     }
 
     .project-grid {
-      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     .project-card {
       display: flex;
       flex-direction: column;
-      min-height: 334px;
+      min-height: 352px;
     }
 
     .project-card.featured {
@@ -376,12 +377,12 @@
     }
 
     .project-card h3 {
-      font-size: 1.55rem;
+      font-size: 1.45rem;
       margin-bottom: 12px;
     }
 
     .project-card p {
-      max-width: 54ch;
+      max-width: 48ch;
     }
 
     .tags {
@@ -410,6 +411,7 @@
     .card-actions {
       align-items: center;
       margin-top: auto;
+      padding-top: 2px;
     }
 
     .project-card .btn {
@@ -489,6 +491,7 @@
       gap: 12px;
       list-style: none;
       padding: 20px;
+      word-break: break-word;
     }
 
     .contact-list a {
@@ -552,7 +555,7 @@
       }
 
       .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .hero {
@@ -562,11 +565,11 @@
 
     @media (max-width: 640px) {
       h1 {
-        font-size: 2.9rem;
+        font-size: 2.55rem;
       }
 
       .section h2 {
-        font-size: 2.1rem;
+        font-size: 2rem;
       }
 
       .container {
@@ -576,25 +579,33 @@
       .nav {
         align-items: center;
         flex-direction: column;
-        gap: 12px;
-        padding: 14px 0;
+        gap: 10px;
+        padding: 12px 0;
       }
 
       .nav-links {
         flex-wrap: wrap;
         justify-content: center;
+        row-gap: 4px;
+      }
+
+      .nav-links a {
+        font-size: 0.88rem;
+        min-height: 36px;
+        padding: 7px 10px;
       }
 
       .section {
-        padding: 72px 0;
+        padding: 64px 0;
       }
 
       .hero {
-        padding: 52px 0 42px;
+        padding: 42px 0 38px;
       }
 
       .hero-grid {
         gap: 34px;
+        grid-template-columns: 1fr;
       }
 
       .hero-actions,
@@ -606,6 +617,38 @@
 
       .btn {
         width: 100%;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card,
+      .skill-group {
+        min-height: auto;
+      }
+
+      .project-card {
+        padding: 22px;
+      }
+
+      .portrait {
+        aspect-ratio: 1 / 0.82;
+        min-height: 260px;
+      }
+
+      .section-head {
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .section-head p,
+      .lead {
+        font-size: 1rem;
+      }
+
+      .contact-list {
+        padding: 16px;
       }
 
       .availability {
@@ -766,16 +809,17 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="meta">Kotlin mobile project</div>
-            <h3>HealthTrack2</h3>
-            <p>A Kotlin continuation of the HealthTrack idea, expanding the project into mobile development and app structure.</p>
+            <div class="meta">Static product site</div>
+            <h3>Speed Sodas</h3>
+            <p>A bright soda landing page with punchy visuals, clear product messaging, and a simple responsive structure.</p>
             <div class="tags">
-              <span class="tag">Kotlin</span>
-              <span class="tag">Mobile</span>
-              <span class="tag">Health</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">GitHub Pages</span>
             </div>
             <div class="card-actions">
-              <a class="btn secondary" href="https://github.com/bharath1461/HealthTrack2" target="_blank" rel="noreferrer">Code</a>
+              <a class="btn secondary" href="https://bharath1461.github.io/Soda/" target="_blank" rel="noreferrer">Live</a>
+              <a class="btn secondary" href="https://github.com/bharath1461/Soda" target="_blank" rel="noreferrer">Code</a>
             </div>
           </article>
 
@@ -795,17 +839,17 @@
           </article>
 
           <article class="project-card reveal">
-            <div class="meta">Static web builds</div>
-            <h3>Soda and Palace Heritage</h3>
-            <p>Two focused HTML/CSS projects: a bold soda landing page and a heritage website about palace history and architecture.</p>
+            <div class="meta">Heritage website</div>
+            <h3>Palace Heritage</h3>
+            <p>A heritage-focused website presenting palace history, architecture, and cultural context in a clean static layout.</p>
             <div class="tags">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
               <span class="tag">GitHub Pages</span>
             </div>
             <div class="card-actions">
-              <a class="btn secondary" href="https://bharath1461.github.io/Soda/" target="_blank" rel="noreferrer">Soda</a>
-              <a class="btn secondary" href="https://bharath1461.github.io/Palace-heritage/" target="_blank" rel="noreferrer">Palace</a>
+              <a class="btn secondary" href="https://bharath1461.github.io/Palace-heritage/" target="_blank" rel="noreferrer">Live</a>
+              <a class="btn secondary" href="https://github.com/bharath1461/Palace-heritage" target="_blank" rel="noreferrer">Code</a>
             </div>
           </article>
         </div>
@@ -837,7 +881,7 @@
             <h3>App Development</h3>
             <ul>
               <li>TypeScript project work</li>
-              <li>Kotlin mobile experiments</li>
+              <li>Project layout and UI polish</li>
               <li>Product flow thinking</li>
             </ul>
           </article>
