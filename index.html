@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bharath's portfolio featuring web, mobile, and product projects.">
-  <title>Bharath | Developer Portfolio</title>
+  <meta name="description" content="Bharath A — Frontend Developer & UI/UX Designer. 6+ deployed projects in React, TypeScript, and modern web technologies. Google UX Design certified.">
+  <meta name="author" content="Bharath A">
+  <meta property="og:title" content="Bharath A — Frontend Developer & UI/UX Designer">
+  <meta property="og:description" content="Portfolio showcasing 6+ deployed web projects in React, TypeScript, and modern web tech.">
+  <meta property="og:type" content="website">
+  <title>Bharath A | Developer Portfolio</title>
   <script>document.documentElement.classList.add("js");</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,12 +64,17 @@
       color: inherit;
     }
 
+    ul, ol {
+      list-style: none;
+    }
+
     .container {
       margin: 0 auto;
       max-width: 1160px;
       padding: 0 24px;
     }
 
+    /* ── NAV ── */
     .site-header {
       backdrop-filter: blur(16px);
       background: rgba(248, 247, 242, 0.84);
@@ -105,7 +114,6 @@
       align-items: center;
       display: flex;
       gap: 6px;
-      list-style: none;
     }
 
     .nav-links a,
@@ -124,20 +132,204 @@
       color: var(--green);
     }
 
-    .hero {
-      min-height: calc(100vh - 72px);
-      padding: 72px 0 54px;
-    }
-
-    .hero-grid {
+    .nav-resume {
+      background: var(--green) !important;
+      color: #fff !important;
+      display: inline-flex;
       align-items: center;
-      display: grid;
-      gap: 64px;
-      grid-template-columns: minmax(0, 1.16fr) minmax(320px, 0.84fr);
+      padding: 8px 16px !important;
     }
 
-    .hero-copy {
-      animation: fadeUp 700ms var(--ease) both;
+    .nav-resume:hover {
+      background: #145e48 !important;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 120px 0 80px;
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content {
+      animation: fadeUp 800ms var(--ease) both;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: rgba(23, 109, 84, 0.08);
+      border: 1px solid rgba(23, 109, 84, 0.15);
+      border-radius: 99px;
+      color: var(--green);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.2); }
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 5.5vw, 4.8rem);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    .text-green {
+      color: var(--green);
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 40px;
+    }
+
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .hero-cta .btn {
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      border-radius: 8px;
+    }
+
+    .hero-social {
+      display: flex;
+      gap: 16px;
+      margin-left: 12px;
+    }
+
+    .hero-social a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 200ms ease;
+    }
+
+    .hero-social a:hover {
+      color: var(--ink);
+    }
+
+    .hero-metrics {
+      display: flex;
+      gap: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .metric-item strong {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .metric-item span {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .hero-visual {
+      position: relative;
+      animation: fadeUp 800ms 200ms var(--ease) both;
+    }
+
+    .portrait-frame {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      aspect-ratio: 1/1;
+      border-radius: 16px;
+      background: #e8eee9;
+      border: 1px solid var(--line);
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 15px;
+      position: relative;
+      z-index: 2;
+      filter: grayscale(10%);
+      transition: filter 300ms ease;
+    }
+    
+    .portrait-img:hover {
+      filter: grayscale(0%);
+    }
+
+    .portrait-decor {
+      position: absolute;
+      inset: -14px;
+      border: 1px dashed rgba(23, 109, 84, 0.25);
+      border-radius: 24px;
+      z-index: 1;
+      pointer-events: none;
     }
 
     .eyebrow {
@@ -159,9 +351,7 @@
       width: 8px;
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       line-height: 1.08;
     }
 
@@ -184,10 +374,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-    }
-
-    .hero-actions {
-      margin-top: 34px;
     }
 
     .btn {
@@ -213,56 +399,7 @@
       transform: translateY(-2px);
     }
 
-    .portrait-panel {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      position: relative;
-      transform: translateZ(0);
-      transition: transform 350ms var(--ease), box-shadow 350ms var(--ease);
-      animation: fadeUp 800ms 120ms var(--ease) both;
-    }
-
-    .portrait-panel:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-6px);
-    }
-
-    .portrait {
-      background: #e8eee9;
-      aspect-ratio: 1 / 0.9;
-      min-height: 330px;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    .availability {
-      display: grid;
-      gap: 18px;
-      grid-template-columns: 1fr 1fr;
-      padding: 22px;
-    }
-
-    .metric {
-      background: var(--surface-soft);
-      border: 1px solid rgba(23, 109, 84, 0.12);
-      border-radius: 8px;
-      padding: 16px;
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 1.35rem;
-      line-height: 1.1;
-    }
-
-    .metric span {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
+    /* ── SECTIONS ── */
     .section {
       padding: 100px 0;
     }
@@ -291,69 +428,246 @@
       max-width: 680px;
     }
 
-    .about-grid,
-    .project-grid,
-    .skills-grid {
+    /* ── ABOUT ── */
+    .about-content {
       display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 42px;
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .about-text strong {
+      color: var(--ink);
+    }
+
+    .about-traits {
+      display: grid;
+      gap: 12px;
+    }
+
+    .trait {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 20px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      transition: border-color 260ms var(--ease), box-shadow 260ms var(--ease), transform 260ms var(--ease);
+    }
+
+    .trait:hover {
+      border-color: rgba(23, 109, 84, 0.28);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+
+    .trait-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .trait-dot--green { background: var(--green); }
+    .trait-dot--blue { background: var(--blue); }
+    .trait-dot--coral { background: var(--coral); }
+    .trait-dot--yellow { background: var(--yellow); }
+
+    .trait h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .trait p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Education + Certs panels */
+    .about-panels {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 22px;
+      margin-bottom: 42px;
     }
 
-    .about-grid {
-      grid-template-columns: repeat(3, 1fr);
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 26px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      transition: border-color 260ms var(--ease), box-shadow 260ms var(--ease), transform 260ms var(--ease);
     }
 
-    .info-block,
-    .project-card,
-    .skill-group {
+    .panel:hover {
+      border-color: rgba(23, 109, 84, 0.28);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+
+    .panel-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* Timeline */
+    .edu-list { display: grid; gap: 18px; }
+
+    .edu-item {
+      padding-left: 16px;
+      border-left: 2px solid var(--line);
+      transition: border-color 200ms var(--ease);
+    }
+
+    .edu-item:hover { border-left-color: var(--green); }
+
+    .edu-item h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .edu-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .edu-score {
+      font-size: 0.82rem;
+      color: var(--green);
+      font-weight: 700;
+      margin-top: 1px;
+    }
+
+    /* Cert list */
+    .cert-list { display: grid; gap: 12px; }
+
+    .cert {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      transition: border-color 200ms var(--ease);
+    }
+
+    .cert:hover { border-color: rgba(23, 109, 84, 0.28); }
+
+    .cert-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .cert-dot--blue { background: var(--blue); }
+    .cert-dot--yellow { background: var(--yellow); }
+    .cert-dot--coral { background: var(--coral); }
+
+    .cert h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .cert span {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Achievements */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .ach-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 22px 20px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      transition: border-color 260ms var(--ease), box-shadow 260ms var(--ease), transform 260ms var(--ease);
+    }
+
+    .ach-card:hover {
+      border-color: rgba(23, 109, 84, 0.28);
+      box-shadow: var(--shadow);
+      transform: translateY(-4px);
+    }
+
+    .ach-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 3px 8px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .ach-tag--gold { background: rgba(240, 185, 71, 0.18); color: #b78c1f; }
+    .ach-tag--bronze { background: rgba(197, 87, 63, 0.12); color: var(--coral); }
+    .ach-tag--blue { background: rgba(36, 79, 158, 0.1); color: var(--blue); }
+
+    .ach-card h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 5px;
+    }
+
+    .ach-card p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 22px;
+    }
+
+    .project-card {
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: 8px;
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      display: flex;
+      flex-direction: column;
       padding: 26px;
       transition: border-color 260ms var(--ease), box-shadow 260ms var(--ease), transform 260ms var(--ease);
     }
 
-    .info-block:hover,
-    .project-card:hover,
-    .skill-group:hover {
+    .project-card:hover {
       border-color: rgba(23, 109, 84, 0.28);
       box-shadow: var(--shadow);
       transform: translateY(-5px);
     }
 
-    .info-block:nth-child(2) {
-      border-top: 5px solid var(--blue);
-    }
-
-    .info-block:nth-child(3) {
-      border-top: 5px solid var(--coral);
-    }
-
-    .info-block:first-child {
-      border-top: 5px solid var(--green);
-    }
-
-    .info-block h3,
-    .skill-group h3 {
-      font-size: 1.08rem;
-      margin-bottom: 10px;
-    }
-
-    .info-block p,
-    .project-card p,
-    .skill-group li {
-      color: var(--muted);
-    }
-
-    .project-grid {
-      align-items: stretch;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .project-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 352px;
+    .project-card--large {
+      min-height: 360px;
     }
 
     .project-card.featured {
@@ -361,6 +675,7 @@
         linear-gradient(135deg, rgba(23, 109, 84, 0.72), transparent 70%),
         var(--ink);
       color: #fff;
+      border-color: transparent;
     }
 
     .project-card.featured p,
@@ -381,8 +696,19 @@
       margin-bottom: 12px;
     }
 
+    .project-grid .project-card h3 {
+      font-size: 1.2rem;
+    }
+
     .project-card p {
       max-width: 48ch;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .project-grid .project-card p {
+      font-size: 0.88rem;
     }
 
     .tags {
@@ -424,35 +750,62 @@
       color: #fff;
     }
 
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    /* ── SKILLS ── */
     .skills-grid {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
     .skill-group {
-      min-height: 210px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+      padding: 26px;
+      transition: border-color 260ms var(--ease), box-shadow 260ms var(--ease), transform 260ms var(--ease);
     }
 
-    .skill-group ul {
-      display: grid;
-      gap: 10px;
-      list-style: none;
+    .skill-group:hover {
+      border-color: rgba(23, 109, 84, 0.28);
+      box-shadow: var(--shadow);
+      transform: translateY(-5px);
     }
 
-    .skill-group li {
-      align-items: center;
+    .skill-group h3 {
+      font-size: 1.08rem;
+      margin-bottom: 14px;
+    }
+
+    .skill-tags {
       display: flex;
-      gap: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
-    .skill-group li::before {
-      background: var(--yellow);
-      border-radius: 50%;
-      content: "";
-      flex: 0 0 8px;
-      height: 8px;
-      width: 8px;
+    .skill-tag {
+      background: var(--surface-soft);
+      border: 1px solid rgba(23, 109, 84, 0.1);
+      border-radius: 8px;
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 12px;
+      transition: background 200ms var(--ease), border-color 200ms var(--ease);
     }
 
+    .skill-tag:hover {
+      background: var(--green-soft);
+      border-color: rgba(23, 109, 84, 0.25);
+    }
+
+    /* ── CONTACT ── */
     .contact-panel {
       align-items: center;
       background:
@@ -465,6 +818,10 @@
       gap: 28px;
       grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
       padding: 40px;
+    }
+
+    .contact-panel h2 {
+      font-size: 2.4rem;
     }
 
     .contact-panel p {
@@ -488,18 +845,47 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 8px;
       display: grid;
-      gap: 12px;
+      gap: 0;
       list-style: none;
-      padding: 20px;
+      overflow: hidden;
       word-break: break-word;
     }
 
-    .contact-list a {
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background 200ms var(--ease);
+    }
+
+    .contact-item:last-child { border-bottom: none; }
+    .contact-item:hover { background: rgba(255, 255, 255, 0.06); }
+
+    .contact-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.6;
+      width: 65px;
+      flex-shrink: 0;
+    }
+
+    .contact-val {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .contact-val a {
       color: #fff;
-      font-weight: 700;
       text-decoration: none;
     }
 
+    .contact-val a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
     footer {
       color: var(--muted);
       font-size: 0.92rem;
@@ -507,6 +893,7 @@
       text-align: center;
     }
 
+    /* ── REVEAL ── */
     .js .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -518,161 +905,89 @@
       transform: translateY(0);
     }
 
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
+    .reveal-d1 { transition-delay: 80ms; }
+    .reveal-d2 { transition-delay: 160ms; }
+    .reveal-d3 { transition-delay: 240ms; }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 880px) {
-      h1 {
-        font-size: 4rem;
-      }
-
-      .section h2 {
-        font-size: 2.6rem;
-      }
-
-      .hero-grid,
-      .section-head,
-      .contact-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .section-head p {
-        justify-self: start;
-      }
-
-      .about-grid,
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero {
-        min-height: auto;
-      }
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero { min-height: auto; padding: 100px 0 48px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 60px; }
+      .hero-visual { order: -1; }
+      .portrait-frame { max-width: 380px; }
+      .hero-metrics { flex-wrap: wrap; }
+      .section-head { grid-template-columns: 1fr; }
+      .section-head p { justify-self: start; }
+      .about-content { grid-template-columns: 1fr; }
+      .about-panels { grid-template-columns: 1fr; }
+      .projects-featured { grid-template-columns: 1fr; }
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-panel { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
-      h1 {
-        font-size: 2.55rem;
-      }
-
-      .section h2 {
-        font-size: 2rem;
-      }
-
-      .container {
-        padding: 0 18px;
-      }
-
+      .hero-title { font-size: 2.8rem; }
+      .hero-desc { font-size: 1rem; }
+      .hero-cta { flex-direction: column; align-items: stretch; }
+      .hero-cta .btn { width: 100%; }
+      .hero-social { margin-left: 0; justify-content: center; padding-top: 12px; }
+      .hero-metrics { gap: 24px; }
+      h1 { font-size: 2.55rem; }
+      .section h2 { font-size: 2rem; }
+      .container { padding: 0 18px; }
       .nav {
         align-items: center;
+        flex-direction: row;
+        gap: 0;
+        padding: 0;
+      }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
-        padding: 12px 0;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(248, 247, 242, 0.97);
+        backdrop-filter: blur(12px);
+        padding: 12px 18px 16px;
+        border-bottom: 1px solid var(--line);
+        gap: 4px;
       }
-
-      .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 4px;
-      }
-
-      .nav-links a {
-        font-size: 0.88rem;
-        min-height: 36px;
-        padding: 7px 10px;
-      }
-
-      .section {
-        padding: 64px 0;
-      }
-
-      .hero {
-        padding: 42px 0 38px;
-      }
-
-      .hero-grid {
-        gap: 34px;
-        grid-template-columns: 1fr;
-      }
-
-      .hero-actions,
-      .contact-actions,
-      .card-actions {
+      .nav-links.open a { width: 100%; padding: 10px 14px; }
+      .menu-btn { display: flex; }
+      .section { padding: 64px 0; }
+      .hero { padding: 90px 0 38px; }
+      .card-actions, .contact-actions {
         align-items: stretch;
         flex-direction: column;
       }
-
-      .btn {
-        width: 100%;
-      }
-
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-card,
-      .skill-group {
-        min-height: auto;
-      }
-
-      .project-card {
-        padding: 22px;
-      }
-
-      .portrait {
-        aspect-ratio: 1 / 0.82;
-        min-height: 260px;
-      }
-
-      .section-head {
-        gap: 16px;
-        margin-bottom: 28px;
-      }
-
-      .section-head p,
-      .lead {
-        font-size: 1rem;
-      }
-
-      .contact-list {
-        padding: 16px;
-      }
-
-      .availability {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-panel {
-        padding: 28px;
-      }
+      .contact-actions .btn { width: 100%; }
+      .project-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .achievements-grid { grid-template-columns: 1fr; }
+      .project-card, .skill-group { min-height: auto; }
+      .project-card { padding: 22px; }
+      .section-head { gap: 16px; margin-bottom: 28px; }
+      .section-head p, .lead { font-size: 1rem; }
+      .contact-panel { padding: 28px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         animation-duration: 0.001ms !important;
         scroll-behavior: auto !important;
         transition-duration: 0.001ms !important;
       }
-
-      .js .reveal {
-        opacity: 1;
-        transform: none;
-      }
+      .js .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
@@ -680,76 +995,206 @@
 <body>
   <header class="site-header">
     <nav class="container nav" aria-label="Main navigation">
-      <a class="brand" href="#top">Bharath</a>
-      <ul class="nav-links">
+      <a class="brand" href="#top">Bharath A</a>
+      <button class="menu-btn" id="menuToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="#work">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="Bharath_Resume.pdf" class="nav-resume" target="_blank">Resume</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="top">
+    <!-- ── HERO ── -->
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Portfolio 2026</span>
-          <h1>Developer building useful web and app experiences.</h1>
-          <p class="lead">
-            Hi, I am Bharath. I build projects that turn ideas into working products, from responsive websites to web apps and mobile experiments.
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            Available for Internships
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm Bharath.<br>
+            <span class="text-green">Frontend Developer.</span>
+          </h1>
+          <p class="hero-desc">
+            I craft clean, user-centric web applications using React and TypeScript. Based in Mysuru, India, I'm passionate about turning ideas into real, deployed products.
           </p>
-          <div class="hero-actions" aria-label="Primary links">
-            <a class="btn primary" href="#work">View projects</a>
-            <a class="btn secondary" href="mailto:bharath00127@gmail.com">Email me</a>
+          <div class="hero-cta">
+            <a href="#work" class="btn primary">View My Work</a>
+            <a href="mailto:bharath00127@gmail.com" class="btn secondary">Get in Touch</a>
+            <div class="hero-social">
+              <a href="https://github.com/bharath1461" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://linkedin.com/in/bharath00146" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+          
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <strong>6+</strong>
+              <span>Deployed Projects</span>
+            </div>
+            <div class="metric-item">
+              <strong>8.0</strong>
+              <span>CGPA, B.Tech</span>
+            </div>
+            <div class="metric-item">
+              <strong>UX Certified</strong>
+              <span>Google</span>
+            </div>
           </div>
         </div>
 
-        <aside class="portrait-panel" aria-label="Bharath profile summary">
-          <img class="portrait" src="https://avatars.githubusercontent.com/u/242765098?v=4" alt="Bharath GitHub profile avatar">
-          <div class="availability">
-            <div class="metric">
-              <strong>10</strong>
-              <span>public repositories</span>
-            </div>
-            <div class="metric">
-              <strong>2026</strong>
-              <span>latest portfolio refresh</span>
-            </div>
+        <div class="hero-visual">
+          <div class="portrait-frame">
+            <img src="https://avatars.githubusercontent.com/u/242765098?v=4" alt="Bharath A" class="portrait-img">
+            <div class="portrait-decor"></div>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
+    <!-- ── ABOUT ── -->
     <section class="section alt reveal" id="about">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="eyebrow">About</span>
-            <h2>Learning fast by shipping real projects.</h2>
+            <h2>Shipping real products, learning fast.</h2>
           </div>
           <p>
-            I enjoy building complete, usable projects and improving them through iteration. My current work spans front-end development, deployment, user flows, and practical product thinking.
+            Frontend developer and product builder with a passion for turning ideas into working, deployed applications.
           </p>
         </div>
 
-        <div class="about-grid">
-          <article class="info-block reveal">
-            <h3>Build</h3>
-            <p>I turn concepts into functional websites and applications with clear layouts, responsive behavior, and purposeful interactions.</p>
-          </article>
-          <article class="info-block reveal">
-            <h3>Improve</h3>
-            <p>I refine design, structure, and code quality so each project becomes easier to use, maintain, and present.</p>
-          </article>
-          <article class="info-block reveal">
-            <h3>Learn</h3>
-            <p>I keep expanding across JavaScript, TypeScript, Kotlin, UI design, GitHub Pages, and modern deployment workflows.</p>
-          </article>
+        <div class="about-content">
+          <div class="about-text reveal">
+            <p>
+              I'm <strong>Bharath A</strong>, a frontend developer and UI/UX designer based in <strong>Mysuru, India</strong>. I've built and deployed <strong>6+ web projects</strong> spanning vanilla web apps and full-stack React/TypeScript products.
+            </p>
+            <br>
+            <p>
+              I actively use AI-assisted development tools — Claude Code, Cursor, GitHub Copilot, Windsurf, v0, and Bolt.new — to ship faster while retaining full ownership of architecture and design. Skilled in <strong>Figma-to-production</strong> UI workflows and end-to-end product thinking.
+            </p>
+            <br>
+            <p>
+              Currently pursuing <strong>B.Tech in Computer Science</strong> at Vidyavardhaka College of Engineering (GPA 8.0). <strong>Google UX Design</strong> certified. I speak English, Tamil, Kannada, and Hindi.
+            </p>
+          </div>
+
+          <div class="about-traits reveal reveal-d1">
+            <div class="trait">
+              <div class="trait-dot trait-dot--green"></div>
+              <div>
+                <h4>Build & Ship</h4>
+                <p>Concept to production — I manage the full product lifecycle from PRD to deploy.</p>
+              </div>
+            </div>
+            <div class="trait">
+              <div class="trait-dot trait-dot--blue"></div>
+              <div>
+                <h4>Design Systems</h4>
+                <p>Figma wireframing, prototyping, and polished responsive UI implementation.</p>
+              </div>
+            </div>
+            <div class="trait">
+              <div class="trait-dot trait-dot--coral"></div>
+              <div>
+                <h4>AI-Augmented Dev</h4>
+                <p>Leveraging Cursor, Copilot, v0, and Bolt.new to accelerate development.</p>
+              </div>
+            </div>
+            <div class="trait">
+              <div class="trait-dot trait-dot--yellow"></div>
+              <div>
+                <h4>Full-Stack Capable</h4>
+                <p>React, TypeScript, Supabase, Firebase — building complete product experiences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-panels">
+          <div class="panel reveal">
+            <div class="panel-label">Education</div>
+            <div class="edu-list">
+              <div class="edu-item">
+                <h4>B.Tech Computer Science</h4>
+                <div class="edu-meta">Vidyavardhaka College of Engineering, Mysuru · 2025–2029</div>
+                <div class="edu-score">GPA: 8.0</div>
+              </div>
+              <div class="edu-item">
+                <h4>Pre-University (PCMC)</h4>
+                <div class="edu-meta">GCIS PU College, Bangalore · 2023–2025</div>
+                <div class="edu-score">87%</div>
+              </div>
+              <div class="edu-item">
+                <h4>Grade 10 — CBSE</h4>
+                <div class="edu-meta">Indian Public School, Bangalore · 2022–2023</div>
+                <div class="edu-score">77%</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel reveal reveal-d1">
+            <div class="panel-label">Certifications</div>
+            <div class="cert-list">
+              <div class="cert">
+                <div class="cert-dot cert-dot--blue"></div>
+                <div>
+                  <h4>Google UX Design Professional Certificate</h4>
+                  <span>Google · Coursera · 2026</span>
+                </div>
+              </div>
+              <div class="cert">
+                <div class="cert-dot cert-dot--yellow"></div>
+                <div>
+                  <h4>Introduction to Programming with Python</h4>
+                  <span>Logical Operations · Coursera · 2026</span>
+                </div>
+              </div>
+              <div class="cert">
+                <div class="cert-dot cert-dot--coral"></div>
+                <div>
+                  <h4>C for Everyone: Programming Fundamentals</h4>
+                  <span>Coursera · 2025</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="achievements-grid">
+          <div class="ach-card reveal">
+            <span class="ach-tag ach-tag--gold">1st Place</span>
+            <h4>Chamber of Secrets</h4>
+            <p>Magnovite Fest 2025, Christ University Bangalore · ₹10,000</p>
+          </div>
+          <div class="ach-card reveal reveal-d1">
+            <span class="ach-tag ach-tag--bronze">3rd Place</span>
+            <h4>Escape Rooms</h4>
+            <p>Magnovite Fest 2025, Christ University Bangalore · ₹5,000</p>
+          </div>
+          <div class="ach-card reveal reveal-d2">
+            <span class="ach-tag ach-tag--blue">Hackathon</span>
+            <h4>Vibeathon 2026</h4>
+            <p>Built JeevanAid — offline-first PWA for emergency first-aid in rural India</p>
+          </div>
+          <div class="ach-card reveal reveal-d3">
+            <span class="ach-tag ach-tag--blue">Hackathon</span>
+            <h4>HACK-AI-THON VVCE</h4>
+            <p>Built & shipped Findly in 36 hours during the competition</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ── PROJECTS ── -->
     <section class="section reveal" id="work">
       <div class="container">
         <div class="section-head">
@@ -758,49 +1203,52 @@
             <h2>Projects with live demos and code.</h2>
           </div>
           <p>
-            A focused set of recent projects from my GitHub, including web apps, product concepts, and learning builds.
+            Every project is deployed and open-source. From hyperlocal platforms to hackathon builds — all shipped and usable.
           </p>
         </div>
 
-        <div class="project-grid">
-          <article class="project-card featured reveal">
-            <div class="meta">TypeScript web app</div>
+        <div class="projects-featured">
+          <article class="project-card project-card--large featured reveal">
+            <div class="meta">Hyperlocal Job Platform</div>
+            <h3>ShiftIn</h3>
+            <p>A hyperlocal job platform for college students in Mysuru — designed end-to-end from PRD to Figma wireframes across 8+ UI screens, then implemented in React + Vite. Features multi-role auth, real-time job listings, and location-based matching.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Maps API</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn" href="https://shift-in.vercel.app" target="_blank" rel="noreferrer">Live</a>
+              <a class="btn" href="https://github.com/bharath1461/ShiftIn" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--large reveal reveal-d1">
+            <div class="meta">Health Monitoring App</div>
             <h3>HealthTrack</h3>
-            <p>A health tracking product built as a modern web app, focused on clear data entry and a smooth user experience.</p>
+            <p>Medication and health tracking web app in TypeScript + React with 4 core modules — medication log, health stats, reminders, and history. 90+ Lighthouse performance score across mobile and desktop.</p>
             <div class="tags">
               <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
               <span class="tag">Vercel</span>
-              <span class="tag">Health tech</span>
             </div>
             <div class="card-actions">
-              <a class="btn" href="https://health-track-teal.vercel.app" target="_blank" rel="noreferrer">Live</a>
-              <a class="btn" href="https://github.com/bharath1461/HealthTrack" target="_blank" rel="noreferrer">Code</a>
+              <a class="btn secondary" href="https://health-track-teal.vercel.app" target="_blank" rel="noreferrer">Live</a>
+              <a class="btn secondary" href="https://github.com/bharath1461/HealthTrack" target="_blank" rel="noreferrer">Code</a>
             </div>
           </article>
+        </div>
 
+        <div class="project-grid">
           <article class="project-card reveal">
-            <div class="meta">JavaScript product</div>
-            <h3>ShiftIn</h3>
-            <p>A deployed JavaScript project exploring a practical digital workflow with a clean product-style interface.</p>
+            <div class="meta">AI Document System</div>
+            <h3>Findly</h3>
+            <p>Built at HACK-AI-THON VVCE in 36 hours. A 3-step upload, tag, retrieve workflow for educational institutions.</p>
             <div class="tags">
               <span class="tag">JavaScript</span>
-              <span class="tag">Vercel</span>
-              <span class="tag">UI</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn secondary" href="https://shift-in.vercel.app" target="_blank" rel="noreferrer">Live</a>
-              <a class="btn secondary" href="https://github.com/bharath1461/ShiftIn" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="meta">AI document system</div>
-            <h3>Findly</h3>
-            <p>An AI-powered document management system for educational institutions, designed around finding and organizing files faster.</p>
-            <div class="tags">
               <span class="tag">CSS</span>
-              <span class="tag">GitHub Pages</span>
-              <span class="tag">AI concept</span>
             </div>
             <div class="card-actions">
               <a class="btn secondary" href="https://bharath1461.github.io/Findly/" target="_blank" rel="noreferrer">Live</a>
@@ -808,29 +1256,13 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="meta">Static product site</div>
-            <h3>Speed Sodas</h3>
-            <p>A bright soda landing page with punchy visuals, clear product messaging, and a simple responsive structure.</p>
-            <div class="tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">GitHub Pages</span>
-            </div>
-            <div class="card-actions">
-              <a class="btn secondary" href="https://bharath1461.github.io/Soda/" target="_blank" rel="noreferrer">Live</a>
-              <a class="btn secondary" href="https://github.com/bharath1461/Soda" target="_blank" rel="noreferrer">Code</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="meta">JavaScript website</div>
+          <article class="project-card reveal reveal-d1">
+            <div class="meta">Travel Discovery</div>
             <h3>Mysuru Unexplored</h3>
-            <p>A web experience highlighting lesser-known places and culture of Mysuru through a visual, location-focused site.</p>
+            <p>Mobile-first site showcasing 10+ curated destinations. Pure HTML & CSS — zero frameworks.</p>
             <div class="tags">
               <span class="tag">JavaScript</span>
-              <span class="tag">Culture</span>
-              <span class="tag">Travel</span>
+              <span class="tag">CSS</span>
             </div>
             <div class="card-actions">
               <a class="btn secondary" href="https://bharath1461.github.io/Mysuru-Unexplored/" target="_blank" rel="noreferrer">Live</a>
@@ -838,14 +1270,28 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
-            <div class="meta">Heritage website</div>
-            <h3>Palace Heritage</h3>
-            <p>A heritage-focused website presenting palace history, architecture, and cultural context in a clean static layout.</p>
+          <article class="project-card reveal reveal-d2">
+            <div class="meta">Animated Landing Page</div>
+            <h3>Speed Sodas</h3>
+            <p>Scroll-triggered CSS animations and punchy visuals. Advanced frontend styling and motion design.</p>
             <div class="tags">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
-              <span class="tag">GitHub Pages</span>
+            </div>
+            <div class="card-actions">
+              <a class="btn secondary" href="https://bharath1461.github.io/Soda/" target="_blank" rel="noreferrer">Live</a>
+              <a class="btn secondary" href="https://github.com/bharath1461/Soda" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal-d3">
+            <div class="meta">Heritage Website</div>
+            <h3>Palace Heritage</h3>
+            <p>Editorial-style interface presenting palace history with structured galleries and typographic hierarchy.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
             </div>
             <div class="card-actions">
               <a class="btn secondary" href="https://bharath1461.github.io/Palace-heritage/" target="_blank" rel="noreferrer">Live</a>
@@ -856,76 +1302,128 @@
       </div>
     </section>
 
+    <!-- ── SKILLS ── -->
     <section class="section alt reveal" id="skills">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Skills</span>
+            <span class="eyebrow">Tech Stack</span>
             <h2>Tools I use to build.</h2>
           </div>
           <p>
-            My skill set is growing through hands-on projects, with attention to practical development, deployment, and user-facing polish.
+            Growing through hands-on projects, with attention to modern development, design, and deployment workflows.
           </p>
         </div>
 
         <div class="skills-grid">
           <article class="skill-group reveal">
             <h3>Frontend</h3>
-            <ul>
-              <li>HTML5 and semantic structure</li>
-              <li>CSS layouts and responsive design</li>
-              <li>JavaScript interfaces</li>
-            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Vite</span>
+            </div>
+          </article>
+          <article class="skill-group reveal reveal-d1">
+            <h3>Backend & Database</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Supabase</span>
+              <span class="skill-tag">Firebase</span>
+            </div>
+          </article>
+          <article class="skill-group reveal reveal-d2">
+            <h3>UI/UX & Design</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">FigJam</span>
+              <span class="skill-tag">Wireframing</span>
+              <span class="skill-tag">Prototyping</span>
+              <span class="skill-tag">Canva</span>
+            </div>
           </article>
           <article class="skill-group reveal">
-            <h3>App Development</h3>
-            <ul>
-              <li>TypeScript project work</li>
-              <li>Project layout and UI polish</li>
-              <li>Product flow thinking</li>
-            </ul>
+            <h3>AI Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Claude Code</span>
+              <span class="skill-tag">Cursor</span>
+              <span class="skill-tag">GitHub Copilot</span>
+              <span class="skill-tag">Windsurf</span>
+              <span class="skill-tag">v0 (Vercel)</span>
+              <span class="skill-tag">Bolt.new</span>
+            </div>
           </article>
-          <article class="skill-group reveal">
-            <h3>Workflow</h3>
-            <ul>
-              <li>Git and GitHub</li>
-              <li>GitHub Pages deployment</li>
-              <li>Vercel deployment</li>
-            </ul>
+          <article class="skill-group reveal reveal-d1">
+            <h3>Dev Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">GitHub Pages</span>
+            </div>
+          </article>
+          <article class="skill-group reveal reveal-d2">
+            <h3>Programming</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Python</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- ── CONTACT ── -->
     <section class="section reveal" id="contact">
       <div class="container">
         <div class="contact-panel">
           <div>
-            <span class="eyebrow">Contact</span>
+            <span class="eyebrow" style="color: rgba(255,255,255,0.7)">Contact</span>
             <h2>Have an idea or opportunity?</h2>
-            <p>I am open to collaborations, internships, learning opportunities, and project conversations.</p>
-            <div class="contact-actions">
+            <p>I'm open to collaborations, internships, learning opportunities, and project conversations.</p>
+            <div class="contact-actions" style="margin-top: 24px;">
               <a class="btn primary" href="mailto:bharath00127@gmail.com">Send email</a>
-              <a class="btn" href="https://github.com/bharath1461" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn" href="Bharath_Resume.pdf" target="_blank">Download resume</a>
             </div>
           </div>
-          <ul class="contact-list">
-            <li>Email: <a href="mailto:bharath00127@gmail.com">bharath00127@gmail.com</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/bharath00146" target="_blank" rel="noreferrer">bharath00146</a></li>
-            <li>GitHub: <a href="https://github.com/bharath1461" target="_blank" rel="noreferrer">bharath1461</a></li>
-          </ul>
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <span class="contact-val"><a href="mailto:bharath00127@gmail.com">bharath00127@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <span class="contact-val"><a href="tel:+919805550600">+91 98055 50600</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val"><a href="https://linkedin.com/in/bharath00146" target="_blank" rel="noreferrer">bharath00146</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val"><a href="https://github.com/bharath1461" target="_blank" rel="noreferrer">bharath1461</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <span class="contact-val">Mysuru, India</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">Built by Bharath. Updated for 2026.</div>
+    <div class="container">Built by Bharath A. Updated for 2026.</div>
   </footer>
 
   <script>
+    // Scroll reveal
     const revealItems = document.querySelectorAll(".reveal");
-
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -934,12 +1432,19 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.16 });
-
+      }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
       revealItems.forEach((item) => observer.observe(item));
     } else {
       revealItems.forEach((item) => item.classList.add("is-visible"));
     }
+
+    // Mobile menu
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    menuToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+    navLinks.querySelectorAll("a").forEach((a) =>
+      a.addEventListener("click", () => navLinks.classList.remove("open"))
+    );
   </script>
 </body>
 </html>
