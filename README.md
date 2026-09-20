@@ -1,47 +1,46 @@
 # Bharath Portfolio
 
-Personal portfolio website for showcasing my projects, skills, and contact links.
+Personal developer portfolio website showcasing deployed web applications, design systems, technical skillsets, and contact links.
 
 ## Live Site
 
-https://bharath1461.github.io/Portfolio/
+[https://bharath1461.github.io/Portfolio/](https://bharath1461.github.io/Portfolio/)
 
-## Highlights
+## Key Highlights
 
-- Responsive single-page portfolio
-- Project showcase with live demo and GitHub links
-- Updated sections for About, Skills, Work, and Contact
-- GitHub Pages friendly with no build step required
+- **Interactive Developer Console**: Modern IDE sandbox in the hero section featuring interactive tabs (`bharath.ts` & `stack.json`) with syntax highlighting and one-click code copying.
+- **Clean Motion & Micro-Interactions**: Smooth staggered scroll-reveal animations via IntersectionObserver, scroll-spy navbar highlighting, and interactive card hover physics.
+- **Mobile-Friendly UI**: Touch-first responsive navigation drawer with animated hamburger morphing, backdrop blur, and fluid layouts down to 360px viewports.
+- **Quick-Copy Contact**: Direct one-tap clipboard copy for email and phone with floating toast notifications.
+- **Zero-Build & Lightweight**: Pure semantic HTML5, CSS3 variables, and vanilla JavaScript for optimal performance and effortless GitHub Pages hosting.
 
 ## Featured Projects
 
-- HealthTrack
-- ShiftIn
-- Findly
-- Mysuru Unexplored
-- Soda
-- Palace Heritage
+- **ShiftIn**: Hyperlocal job platform built with React, Vite, Supabase, Firebase, and Maps API.
+- **HealthTrack**: Medication and health metrics tracking web app in TypeScript and React (Lighthouse 90+).
+- **Findly**: AI-driven document search and retrieval system built during HACK-AI-THON VVCE.
+- **Mysuru Unexplored**: Mobile-first travel discovery platform crafted in vanilla HTML & CSS.
+- **Speed Sodas**: Motion-heavy animated product landing page showcasing CSS keyframes.
+- **Palace Heritage**: Typographic editorial experience celebrating historic architecture.
 
-## Built With
+## Tech Stack
 
-- HTML5
-- CSS3
-- GitHub Pages
+- **Frontend**: HTML5, CSS3 (Custom Design System, Flexbox, Grid), Vanilla JavaScript (ES6+)
+- **Typography**: Plus Jakarta Sans, Fira Code
+- **Deployment**: GitHub Pages
 
-## Project Structure
+## Local Development
 
-```text
-.
-├── index.html
-└── README.md
+Open `index.html` directly in any web browser, or spin up a local static server:
+
+```bash
+# Using Node / npx
+npx serve .
 ```
-
-## Local Preview
-
-Open `index.html` in a browser, or use any static file server.
 
 ## Contact
 
-- GitHub: https://github.com/bharath1461
-- LinkedIn: https://linkedin.com/in/bharath00146
-- Email: bharath00127@gmail.com
+- **GitHub**: [bharath1461](https://github.com/bharath1461)
+- **LinkedIn**: [bharath00146](https://linkedin.com/in/bharath00146)
+- **Email**: bharath00127@gmail.com
+- **Phone**: +91 98055 50600
