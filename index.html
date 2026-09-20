@@ -146,19 +146,30 @@
     }
 
     .brand-mark {
-      background: linear-gradient(135deg, var(--primary), #10b981);
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
-      content: "";
-      height: 28px;
-      width: 28px;
+      background: linear-gradient(135deg, var(--primary) 0%, #10b981 100%);
+      border-radius: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      height: 32px;
+      width: 32px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       color: #fff;
-      font-weight: 800;
-      font-size: 0.9rem;
       position: relative;
+      flex-shrink: 0;
+      transition: transform 220ms var(--ease), box-shadow 220ms var(--ease);
+    }
+
+    .brand:hover .brand-mark {
+      transform: rotate(-6deg) scale(1.08);
+      box-shadow: 0 6px 18px rgba(5, 150, 105, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    .brand-mark svg {
+      width: 18px;
+      height: 18px;
+      display: block;
     }
 
     .nav-links {
@@ -1688,7 +1699,14 @@
   <header class="site-header" id="siteHeader">
     <nav class="container nav" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Bharath A homepage">
-        <span class="brand-mark">B</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.5L20.2 7.2V16.8L12 21.5L3.8 16.8V7.2L12 2.5Z" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9.5 9.5L7 12L9.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.5 9.5L17 12L14.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="1.5" fill="white"/>
+          </svg>
+        </span>
         <span>Bharath A</span>
       </a>
 
